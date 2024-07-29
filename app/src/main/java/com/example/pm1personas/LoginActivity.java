@@ -37,17 +37,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
-
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         Button signInButton = findViewById(R.id.sign_in_button);
         signInButton.setOnClickListener(v -> signIn());
 
-        // Initialize the One Tap client
         oneTapClient = Identity.getSignInClient(this);
 
-        // Get the client ID from resources
         String webClientId = getString(R.string.cliente_web_google_auth);
 
         signInRequest = BeginSignInRequest.builder()
@@ -67,10 +63,10 @@ public class LoginActivity extends AppCompatActivity {
                         IntentSender signInIntentSender = response.getPendingIntent().getIntentSender();
                         startIntentSenderForResult(signInIntentSender, REQ_ONE_TAP, null, 0, 0, 0);
                     } catch (IntentSender.SendIntentException e) {
-                        Log.e(TAG, "Error starting sign in intent", e);
+                        Log.e(TAG, "Error al iniciar proceso de ingreso", e);
                     }
                 })
-                .addOnFailureListener(e -> Log.e(TAG, "One Tap sign in failed", e));
+                .addOnFailureListener(e -> Log.e(TAG, "Fallo al ingresar", e));
     }
 
     @Override
@@ -97,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d(TAG, "No ID token!");
                 }
             } catch (ApiException e) {
-                Log.e(TAG, "Error getting credential from intent", e);
+                Log.e(TAG, "Error  al obtener credenciales", e);
             }
         }
     }
