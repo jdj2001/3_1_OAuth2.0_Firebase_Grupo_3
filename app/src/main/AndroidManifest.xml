@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pm1personas"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="@string/cliente_web_google_auth" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.pm1personas.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".CreatePersonaActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ReadPersonasActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".PersonaAdapter"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".Persona"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".UpdatePersonaActivity"
+            android:exported="true">
+
+        </activity>
+    </application>
+
+</manifest>

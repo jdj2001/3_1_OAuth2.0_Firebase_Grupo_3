@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageView"
+        android:text="Nombre"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageView"
+        android:layout_below="@id/textViewNombre"
+        android:text="Apellido"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageView"
+        android:layout_below="@id/textViewApellido"
+        android:text="Correo"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewFechaNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageView"
+        android:layout_below="@id/textViewCorreo"
+        android:text="Fecha de Nacimiento"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/textViewFechaNac"
+        android:text="Actualizar" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/updateButton"
+        android:layout_alignBaseline="@id/updateButton"
+        android:text="Eliminar" />
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNombres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombres"/>
+
+    <EditText
+        android:id="@+id/editTextApellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNombres"
+        android:hint="Apellidos"/>
+
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextApellidos"
+        android:hint="Correo"/>
+
+    <EditText
+        android:id="@+id/editTextFechaNac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCorreo"
+        android:hint="Fecha de Nacimiento"/>
+
+    <ImageView
+        android:id="@+id/imageViewFoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/editTextFechaNac"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/default_image"
+        android:contentDescription="Foto"/>
+
+    <Button
+        android:id="@+id/buttonSelectFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewFoto"
+        android:layout_marginTop="16dp"
+        android:text="Seleccionar Foto"
+        android:layout_centerHorizontal="true"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSelectFoto"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/buttonActualizar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Actualizar"/>
+
+        <Button
+            android:id="@+id/buttonCancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancelar"/>
+    </LinearLayout>
+
+</RelativeLayout>

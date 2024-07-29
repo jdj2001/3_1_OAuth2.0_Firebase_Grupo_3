@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">pm1personas</string>
+    <string name="image_description">Imagen seleccionada</string>
+    <string name="file_provider_authority">com.example.pm1personas.fileprovider</string>
+</resources>

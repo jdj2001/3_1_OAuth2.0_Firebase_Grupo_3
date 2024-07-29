@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePersonaActivity">
+
+    <EditText
+        android:id="@+id/nombres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombres" />
+
+    <EditText
+        android:id="@+id/apellidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombres"
+        android:hint="Apellidos" />
+
+    <EditText
+        android:id="@+id/correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/apellidos"
+        android:hint="Correo" />
+
+    <EditText
+        android:id="@+id/fechanac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/correo"
+        android:hint="Fecha de Nacimiento" />
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/fechanac"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_description" />
+
+    <Button
+        android:id="@+id/selectPhotoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectedImage"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Seleccionar Foto"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/capturePhotoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectPhotoButton"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Capturar Foto"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/capturePhotoButton"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Crear"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/viewPersonasButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createButton"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Ver Personas"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <!--<Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
