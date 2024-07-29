@@ -115,10 +115,8 @@ public class CreatePersonaActivity extends AppCompatActivity {
 
 
     private void logout() {
-        // Sign out from Firebase
         mAuth.signOut();
 
-        // Redirect to login activity
         Intent intent = new Intent(CreatePersonaActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
