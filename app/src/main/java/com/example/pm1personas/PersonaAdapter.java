@@ -59,7 +59,6 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.PersonaV
         holder.textViewCorreo.setText(persona.getCorreo());
         holder.textViewFechaNac.setText(persona.getFechanac());
 
-        // Obtener la URL de la imagen desde la base de datos
         DatabaseReference personaRef = databaseReference.child(persona.getId());
         personaRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

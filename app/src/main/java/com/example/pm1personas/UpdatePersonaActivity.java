@@ -68,7 +68,6 @@ public class UpdatePersonaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_persona);
 
-        // Inicialización de vistas
         editTextNombres = findViewById(R.id.editTextNombres);
         editTextApellidos = findViewById(R.id.editTextApellidos);
         editTextCorreo = findViewById(R.id.editTextCorreo);
@@ -221,7 +220,6 @@ public class UpdatePersonaActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Manejar posibles errores
                 Toast.makeText(UpdatePersonaActivity.this, "Error al cargar datos", Toast.LENGTH_SHORT).show();
             }
         });

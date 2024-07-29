@@ -9,7 +9,7 @@ public class Persona {
     private String foto;
 
     public Persona() {
-        // Constructor vacío necesario para Firebase
+
     }
 
     public Persona(String id, String nombres, String apellidos, String correo, String fechanac, String foto) {
@@ -21,7 +21,6 @@ public class Persona {
         this.foto = foto;
     }
 
-    // Getters y setters para cada atributo
     public String getId() {
         return id;
     }

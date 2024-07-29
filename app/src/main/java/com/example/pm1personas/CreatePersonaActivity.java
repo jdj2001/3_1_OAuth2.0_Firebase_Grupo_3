@@ -66,8 +66,8 @@ public class CreatePersonaActivity extends AppCompatActivity {
         selectedImageView = findViewById(R.id.selectedImage);
         progressBar = findViewById(R.id.progressBar);
 
-        //Button logoutButton = findViewById(R.id.btn_logout);
-        //logoutButton.setOnClickListener(v -> logout());
+        Button logoutButton = findViewById(R.id.btn_logout);
+        logoutButton.setOnClickListener(v -> logout());
 
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,10 +115,8 @@ public class CreatePersonaActivity extends AppCompatActivity {
 
 
     private void logout() {
-        // Sign out from Firebase
         mAuth.signOut();
 
-        // Redirect to login activity
         Intent intent = new Intent(CreatePersonaActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
